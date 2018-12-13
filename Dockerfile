@@ -139,4 +139,4 @@ RUN cd /var/tmp \
 
 # Standard SSH port
 EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/usr/sbin/sshd", "-D"] 
