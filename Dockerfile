@@ -136,9 +136,20 @@ RUN cd /var/tmp \
     && chmod +x /usr/local/bin/sendEmail
     # && sed -i 's/if \(! IO::Socket::SSL->start_SSL\(\$SERVER, SSL_version => \'TLSv1\'/! IO::Socket::SSL->start_SSL\(\$SERVER, SSL_version => \'TLSv1\', SSL_verify_mode => 0/' /usr/local/bin/sendEmail \
     # && sendEmail
+
+######################################################################
+# RUBY yum install -y ruby-2.2.5 \
+	&& gem install cucumber -v 2.3.3 \
+	&& gem install rspec -v 3.4.0 \
+	&& gem install systemu -v 2.6.5 \ 
+	&& gem install git -v 1.3 \ 
+	&& gem install octokit -v 4.0 \
+	&& gem install simple-graphite  -v 2.1.0 
+
 ######################################################################
 # OTHERS
 RUN chmod 777 /mnt
+
 ######################################################################
 # Standard SSH port
 EXPOSE 22
