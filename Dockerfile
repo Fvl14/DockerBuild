@@ -138,13 +138,14 @@ RUN cd /var/tmp \
     # && sendEmail
 
 ######################################################################
-# RUBY yum install -y ruby-2.2.5 \
-	&& gem install cucumber -v 2.3.3 \
-	&& gem install rspec -v 3.4.0 \
-	&& gem install systemu -v 2.6.5 \ 
-	&& gem install git -v 1.3 \ 
-	&& gem install octokit -v 4.0 \
-	&& gem install simple-graphite  -v 2.1.0 
+# RUBY 
+RUN yum install -y ruby-2.2.5 \
+    && gem install cucumber -v 2.3.3 \
+    && gem install rspec -v 3.4.0 \
+    && gem install systemu -v 2.6.5 \ 
+    && gem install git -v 1.3 \ 
+    && gem install octokit -v 4.0 \
+    && gem install simple-graphite  -v 2.1.0 
 
 ######################################################################
 # OTHERS
