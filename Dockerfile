@@ -136,7 +136,10 @@ RUN cd /var/tmp \
     && chmod +x /usr/local/bin/sendEmail
     # && sed -i 's/if \(! IO::Socket::SSL->start_SSL\(\$SERVER, SSL_version => \'TLSv1\'/! IO::Socket::SSL->start_SSL\(\$SERVER, SSL_version => \'TLSv1\', SSL_verify_mode => 0/' /usr/local/bin/sendEmail \
     # && sendEmail
-
+######################################################################
+# OTHERS
+RUN chmod 777 /mnt
+######################################################################
 # Standard SSH port
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"] 
