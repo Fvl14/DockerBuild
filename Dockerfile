@@ -95,7 +95,8 @@ RUN cpanm --force Array::Compare \
         MooX::Singleton \
         REST::Client \
         Hash::Ordered \
-	Hash::Merge
+	Hash::Merge \
+	Date::Format
 ######################################################################
 # GIT
 RUN yum remove git -y \
@@ -148,6 +149,23 @@ RUN cd /var/tmp \
 #    && gem install octokit -v 4.0 \
 #    && gem install simple-graphite  -v 2.1.0 
 #
+# RUN yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel \
+#   libyaml-devel libffi-devel openssl-devel make \
+#   bzip2 autoconf automake libtool bison iconv-devel sqlite-devel \
+#   && curl -sSL https://rvm.io/mpapis.asc | gpg --import - \
+#   && curl -L get.rvm.io | bash -s stable \
+#   && source /etc/profile.d/rvm.sh \
+#   && rvm reload \
+#   && rvm requirements run \
+#   && rvm install 2.2.5 \
+#   && rvm use 2.2.5 --default \
+#   && ruby --version \
+#    && gem install cucumber -v 2.3.3 \
+#    && gem install rspec -v 3.4.0 \
+#    && gem install systemu -v 2.6.5 \ 
+#    && gem install git -v 1.3 \ 
+#    && gem install octokit -v 4.0 \
+#    && gem install simple-graphite  -v 2.1.0 
 ######################################################################
 # OTHERS
 RUN chmod 777 /mnt
