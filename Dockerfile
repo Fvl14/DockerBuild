@@ -29,7 +29,7 @@ RUN yum install -y openssh-server unzip lsof java-1.8.0-openjdk-headless \
     bzip2 ca-certificates cpio dpkg-dev g++ libbz2-dev libdb-dev \
     libc6-dev libgdbm-dev liblzma-dev netbase patch procps zlib1g-dev xz-utils \
     wget python cifs-utils expat-devel openssl-devel libtool zlib-devel openssl \
-    curl-devel gettext-devel samba-client samba-common rsync \
+    curl-devel gettext-devel samba-client samba-common rsync sudo\
     \ && yum clean all
 ######################################################################
 # PERL MODULES
@@ -168,6 +168,7 @@ RUN cd /var/tmp \
 #    && gem install simple-graphite  -v 2.1.0 
 ######################################################################
 # OTHERS
+
 RUN chmod 777 /mnt
 
 ######################################################################
